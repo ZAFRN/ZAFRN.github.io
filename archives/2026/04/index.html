@@ -7,7 +7,7 @@
   
   
   
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_a0oqhord1y';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://example.com';window.REIMU_CONFIG.relative = '/';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_a0oqhord1y';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":10};window.REIMU_CONFIG.base = 'http://example.com';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
   <title>
     归档: 2026/4 | AWMA
   </title>
@@ -52,7 +52,7 @@
            M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
           </svg>
       </div>
-      <div class="loading-word">少女祈祷中...</div>
+      <div class="loading-word">祈祷中...</div>
     </div>
   </div>
   <script>
@@ -119,7 +119,54 @@
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
       <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a>
   </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">简体中文</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" class="selected" aria-selected="true">简体中文</li>
+            <li data-value="en" role="option" aria-selected="false">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/archives/2026/04/';
+              langMap['en'] = '/en/archives/2026/04/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
 </div>
 <header id="header" aria-label="Site header">
       <picture>
@@ -137,7 +184,7 @@
   </div>
 </header>
 
-        <div id="content" aria-label="Page content"  class="sidebar-right" >
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
           <aside id="sidebar" aria-label="Sidebar">
   <div class="sidebar-wrapper-container ">
   <div class="sidebar-wrapper">
@@ -162,6 +209,102 @@
   </div>
 </div>
 <div class="sidebar-social" >
+    <div class="icon-0 sidebar-social-icon">
+      <a href=w itemprop="url" target="_blank" aria-label="0" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-1 sidebar-social-icon">
+      <a href=e itemprop="url" target="_blank" aria-label="1" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-2 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="2" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-3 sidebar-social-icon">
+      <a href=x itemprop="url" target="_blank" aria-label="3" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-4 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="4" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-5 sidebar-social-icon">
+      <a href=n itemprop="url" target="_blank" aria-label="5" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-6 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="6" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-7 sidebar-social-icon">
+      <a href=1 itemprop="url" target="_blank" aria-label="7" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-8 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="8" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-9 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="9" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-10 sidebar-social-icon">
+      <a href=0 itemprop="url" target="_blank" aria-label="10" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-11 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="11" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-12 sidebar-social-icon">
+      <a href=6 itemprop="url" target="_blank" aria-label="12" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-13 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="13" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-14 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="14" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-15 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="15" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-16 sidebar-social-icon">
+      <a href=9 itemprop="url" target="_blank" aria-label="16" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-17 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="17" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-18 sidebar-social-icon">
+      <a href=  itemprop="url" target="_blank" aria-label="18" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-19 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="19" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-20 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="20" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-21 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="21" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-22 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="22" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-23 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="23" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-24 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="24" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-25 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="25" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-26 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="26" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-27 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="27" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-28 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="28" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-29 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="29" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-30 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="30" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-31 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="31" rel="noopener nofollow noreferrer"></a>
+    </div>
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
@@ -197,6 +340,21 @@
     </div>
   </div>
   <div class="sidebar-widget">
+      
+      
+        <div class="widget-wrapper">
+    <div class="widget-wrap" data-aos="fade-up">
+      <h3 class="widget-title">最新文章</h3>
+      <div class="widget">
+        <ul>
+            <li>
+              <a href="/2026/04/15/hello-world/" title="Hello World">Hello World</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   </div>
   </div>
 </aside>
@@ -237,10 +395,6 @@
         <span class="footer-info-sep rotate"></span>
       ZAFRN
     </div>
-      <div>
-        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
-        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
-      </div>
       <div>
         <span class="icon-brush"></span>
         75
@@ -286,6 +440,102 @@
   </div>
 </div>
 <div class="sidebar-social" >
+    <div class="icon-0 sidebar-social-icon">
+      <a href=w itemprop="url" target="_blank" aria-label="0" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-1 sidebar-social-icon">
+      <a href=e itemprop="url" target="_blank" aria-label="1" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-2 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="2" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-3 sidebar-social-icon">
+      <a href=x itemprop="url" target="_blank" aria-label="3" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-4 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="4" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-5 sidebar-social-icon">
+      <a href=n itemprop="url" target="_blank" aria-label="5" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-6 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="6" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-7 sidebar-social-icon">
+      <a href=1 itemprop="url" target="_blank" aria-label="7" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-8 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="8" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-9 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="9" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-10 sidebar-social-icon">
+      <a href=0 itemprop="url" target="_blank" aria-label="10" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-11 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="11" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-12 sidebar-social-icon">
+      <a href=6 itemprop="url" target="_blank" aria-label="12" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-13 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="13" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-14 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="14" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-15 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="15" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-16 sidebar-social-icon">
+      <a href=9 itemprop="url" target="_blank" aria-label="16" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-17 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="17" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-18 sidebar-social-icon">
+      <a href=  itemprop="url" target="_blank" aria-label="18" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-19 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="19" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-20 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="20" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-21 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="21" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-22 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="22" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-23 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="23" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-24 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="24" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-25 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="25" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-26 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="26" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-27 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="27" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-28 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="28" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-29 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="29" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-30 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="30" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-31 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="31" rel="noopener nofollow noreferrer"></a>
+    </div>
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
@@ -322,6 +572,21 @@
 </nav>
 
     </div>
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png" loading="lazy" decoding="async" fetchpriority="low"/>
+        </div>
+      </div>
     
 <script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
 
@@ -357,20 +622,16 @@
 <script src="/js/pjax_script.js" data-pjax></script>
 
 
-
-
-  <script>
-    var setupFirework = () => {
-      if (!false || !window.matchMedia('(max-width: 768px)').matches) {
-        window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
-      }
-    }
-  </script>
   
-<script src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js" integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8+pUoWX8n1rgq282T" crossorigin="anonymous" onload="setupFirework()" defer></script>
+<script src="/js/generator_search.js" defer></script>
 
 
 
+
+
+
+  
+<script src="https://npm.webcache.cn/live2d-widgets@0.9.0/autoload.js" integrity="sha384-poTN7wN&#x2F;SqNhQqo3jdFeX20ikddWeFGkUkDEzsKjgH&#x2F;ez8aQLn81oI0Cw6q5xNyB" crossorigin="anonymous"></script>
 
 
 
