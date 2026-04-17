@@ -1,0 +1,906 @@
+  <!DOCTYPE html>
+  <html lang="en"  
+      data-theme-mode="auto"
+  >
+  <head>
+  <meta charset="utf-8">
+  
+  
+  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_a0oqhord1y';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":10};window.REIMU_CONFIG.base = 'https://zafrn.github.io';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
+  <title>
+    2023年蓝桥杯C++B组真题 | AWMA
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_a0oqhord1y.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+    <meta name="description" content="2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组真题试题列表A. 日期统计问题描述：小蓝现在有一个长度为100的数组，数组中的每个元素的值都在0到9的范围之内。数组中的元素从左至右如下所示：5 6 8 6 9 1 6 1 2 4 9 1 9 8 2 3 6 4 7 7 5 9 5 0 3 8 7 5 8 1 5 8 6 1 8 3 0 3 7 9 26 7 8 9 9 7 6 9">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2023年蓝桥杯C++B组真题">
+<meta property="og:url" content="https://zafrn.github.io/en/2026/04/17/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E7%9C%9F%E9%A2%98/2023%E7%9C%9F%E9%A2%98/index.html">
+<meta property="og:site_name" content="AWMA">
+<meta property="og:description" content="2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组真题试题列表A. 日期统计问题描述：小蓝现在有一个长度为100的数组，数组中的每个元素的值都在0到9的范围之内。数组中的元素从左至右如下所示：5 6 8 6 9 1 6 1 2 4 9 1 9 8 2 3 6 4 7 7 5 9 5 0 3 8 7 5 8 1 5 8 6 1 8 3 0 3 7 9 26 7 8 9 9 7 6 9">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-17T07:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-17T15:13:51.967Z">
+<meta property="article:author" content="ZAFRN">
+<meta property="article:tag" content="2023">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="真题">
+<meta property="article:tag" content="蓝桥杯">
+<meta name="twitter:card" content="summary">
+    <link rel="alternate" href="/atom.xml" title="AWMA" type="application/atom+xml">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx/1oA/0l8ysE" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+      <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+      </div>
+      <div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script>
+<div id="copy-tooltip"></div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
+        <a class="main-nav-link-wrap" href="/en/">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Home</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/en/archives">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Archives</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/en/about">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">About</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/en/friend">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Friend</span>
+        </a>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation">
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="Search" aria-label="Search"></a>
+  </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">English</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" aria-selected="false">简体中文</li>
+            <li data-value="en" role="option" class="selected" aria-selected="true">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/2026/04/17/蓝桥杯/蓝桥真题/2023真题/';
+              langMap['en'] = '/en/2026/04/17/蓝桥杯/蓝桥真题/2023真题/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
+</div>
+<header id="header" aria-label="Site header">
+    <picture></picture>
+    <img  fetchpriority="high" src="/images/banner4.webp" alt="2023年蓝桥杯C++B组真题">
+  <div id="header-outer">
+    <div id="header-title">
+          <span id="logo">
+            <h1 data-aos="slide-up">2023年蓝桥杯C++B组真题</h1>
+          </span>
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+        </h2>
+    </div>
+  </div>
+</header>
+
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
+          <aside id="sidebar" aria-label="Sidebar">
+  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-wrap" data-aos="fade-up">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2023%E5%B9%B4%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%A7%E8%B5%9B%E8%BD%AF%E4%BB%B6%E8%B5%9B%E7%9C%81%E8%B5%9BC-C-%E5%A4%A7%E5%AD%A6B%E7%BB%84%E7%9C%9F%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组真题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98%E5%88%97%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text">试题列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-%E6%97%A5%E6%9C%9F%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">A. 日期统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-01%E4%B8%B2%E7%9A%84%E7%86%B5"><span class="toc-number">1.1.2.</span> <span class="toc-text">B. 01串的熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E5%86%B6%E7%82%BC%E9%87%91%E5%B1%9E"><span class="toc-number">1.1.3.</span> <span class="toc-text">C. 冶炼金属</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D-%E9%A3%9E%E6%9C%BA%E9%99%8D%E8%90%BD"><span class="toc-number">1.1.4.</span> <span class="toc-text">D. 飞机降落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E-%E6%8E%A5%E9%BE%99%E6%95%B0%E5%88%97"><span class="toc-number">1.1.5.</span> <span class="toc-text">E. 接龙数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#F-%E5%B2%9B%E5%B1%BF%E4%B8%AA%E6%95%B0"><span class="toc-number">1.1.6.</span> <span class="toc-text">F. 岛屿个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G-%E5%AD%90%E4%B8%B2%E7%BC%A9%E5%86%99"><span class="toc-number">1.1.7.</span> <span class="toc-text">G. 子串缩写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H-%E6%95%B4%E6%95%B0%E5%88%A0%E9%99%A4"><span class="toc-number">1.1.8.</span> <span class="toc-text">H. 整数删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-%E6%99%AF%E5%8C%BA%E5%AF%BC%E6%B8%B8"><span class="toc-number">1.1.9.</span> <span class="toc-text">I. 景区导游</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#J-%E7%A0%8D%E6%A0%91"><span class="toc-number">1.1.10.</span> <span class="toc-text">J. 砍树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%B5%9B%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text">参赛经验总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.</span> <span class="toc-text">学习建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90"><span class="toc-number">1.4.</span> <span class="toc-text">参考资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.5.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text">算法知识点总结</span></a></li></ol></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="ZAFRN" class="lazyload">
+  <div class="sidebar-author-name">ZAFRN</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">6</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+    <div class="icon-0 sidebar-social-icon">
+      <a href=w itemprop="url" target="_blank" aria-label="0" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-1 sidebar-social-icon">
+      <a href=e itemprop="url" target="_blank" aria-label="1" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-2 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="2" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-3 sidebar-social-icon">
+      <a href=x itemprop="url" target="_blank" aria-label="3" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-4 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="4" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-5 sidebar-social-icon">
+      <a href=n itemprop="url" target="_blank" aria-label="5" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-6 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="6" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-7 sidebar-social-icon">
+      <a href=1 itemprop="url" target="_blank" aria-label="7" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-8 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="8" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-9 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="9" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-10 sidebar-social-icon">
+      <a href=0 itemprop="url" target="_blank" aria-label="10" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-11 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="11" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-12 sidebar-social-icon">
+      <a href=6 itemprop="url" target="_blank" aria-label="12" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-13 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="13" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-14 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="14" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-15 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="15" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-16 sidebar-social-icon">
+      <a href=9 itemprop="url" target="_blank" aria-label="16" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-17 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="17" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-18 sidebar-social-icon">
+      <a href=  itemprop="url" target="_blank" aria-label="18" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-19 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="19" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-20 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="20" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-21 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="21" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-22 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="22" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-23 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="23" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-24 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="24" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-25 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="25" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-26 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="26" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-27 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="27" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-28 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="28" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-29 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="29" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-30 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="30" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-31 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="31" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+</div>
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+  </div>
+  </div>
+</aside>
+
+          <section id="main" aria-label="Main content"><article id="post-蓝桥杯/蓝桥真题/2023真题" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2026-04-17T07:00:00.000Z" itemprop="datePublished">2026-04-17</time>
+    <time style="display: none;" id="post-update-time">2026-04-17</time>
+  </span>
+</div>
+
+    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <h1 id="2023年第十四届蓝桥杯大赛软件赛省赛C-C-大学B组真题"><a href="#2023年第十四届蓝桥杯大赛软件赛省赛C-C-大学B组真题" class="headerlink" title="2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组真题"></a>2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组真题</h1><h2 id="试题列表"><a href="#试题列表" class="headerlink" title="试题列表"></a>试题列表</h2><h3 id="A-日期统计"><a href="#A-日期统计" class="headerlink" title="A. 日期统计"></a>A. 日期统计</h3><p><strong>问题描述</strong>：<br>小蓝现在有一个长度为100的数组，数组中的每个元素的值都在0到9的范围之内。数组中的元素从左至右如下所示：<br>5 6 8 6 9 1 6 1 2 4 9 1 9 8 2 3 6 4 7 7 5 9 5 0 3 8 7 5 8 1 5 8 6 1 8 3 0 3 7 9 2<br>6 7 8 9 9 7 6 9 4 5 0 5 4 3 2 1 0 2 7 9 9 7 1 5 4 0 9 6 9 0 1 2 3 4 5 6 7 8 9 1 0</p>
+<p>请统计这个数组中包含多少个日期，日期的格式为YYYYMMDD，其中YYYY表示年份，MM表示月份，DD表示日期。年份范围是2023年，月份范围是1-12月，日期范围是1-31日（不考虑闰年）。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用暴力搜索或DFS遍历所有可能的日期组合</li>
+<li>检查每个组合是否构成有效的日期</li>
+<li>统计有效日期的数量</li>
+<li>注意去重，避免重复计算相同的日期</li>
+</ul>
+<h3 id="B-01串的熵"><a href="#B-01串的熵" class="headerlink" title="B. 01串的熵"></a>B. 01串的熵</h3><p><strong>问题描述</strong>：<br>给定一个长度为239的01串，计算该串的熵。熵的计算公式为：H &#x3D; -∑p(i)log₂p(i)，其中p(i)是第i种情况出现的概率。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>统计01串中0和1的数量</li>
+<li>计算0和1出现的概率</li>
+<li>使用对数函数计算熵值</li>
+<li>注意对数函数的使用和精度问题</li>
+</ul>
+<h3 id="C-冶炼金属"><a href="#C-冶炼金属" class="headerlink" title="C. 冶炼金属"></a>C. 冶炼金属</h3><p><strong>问题描述</strong>：<br>小蓝有一个神奇的炉子用于将普通金属O冶炼成为一种特殊金属X。这个炉子有一个称作转换率的属性V，V是一个正整数，这意味着消耗V个普通金属O恰好可以冶炼出1个特殊金属X。现在有A个普通金属O和目标B个特殊金属X，请计算满足条件的V的最小值和最大值。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用数学推理或二分查找方法</li>
+<li>分析转换率V与输入输出的关系</li>
+<li>找到满足条件的V的最小值和最大值</li>
+<li>注意边界条件和特殊情况</li>
+</ul>
+<h3 id="D-飞机降落"><a href="#D-飞机降落" class="headerlink" title="D. 飞机降落"></a>D. 飞机降落</h3><p><strong>问题描述</strong>：<br>有N架飞机需要降落，每架飞机有最早降落时间T和降落所需时间L。如果两架飞机的降落时间有重叠，则不能同时降落。请判断是否所有飞机都能成功降落。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用贪心算法或动态规划</li>
+<li>按照最早降落时间排序</li>
+<li>模拟降落过程，检查时间冲突</li>
+<li>考虑不同的降落顺序</li>
+</ul>
+<h3 id="E-接龙数列"><a href="#E-接龙数列" class="headerlink" title="E. 接龙数列"></a>E. 接龙数列</h3><p><strong>问题描述</strong>：<br>给定一个数列，如果相邻两个数的首尾数字相同，则可以构成接龙。请计算最长的接龙数列长度。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用动态规划算法</li>
+<li>定义状态表示以某个数结尾的最长接龙数列</li>
+<li>考虑首尾数字的匹配关系</li>
+<li>优化算法复杂度</li>
+</ul>
+<h3 id="F-岛屿个数"><a href="#F-岛屿个数" class="headerlink" title="F. 岛屿个数"></a>F. 岛屿个数</h3><p><strong>问题描述</strong>：<br>给定一个二维网格，其中1表示陆地，0表示水域。请统计岛屿的个数，岛屿是由相邻的1组成的区域。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用深度优先搜索(DFS)或广度优先搜索(BFS)</li>
+<li>遍历整个网格，发现未访问的陆地时开始搜索</li>
+<li>标记已访问的陆地，避免重复计算</li>
+<li>统计搜索的次数即为岛屿个数</li>
+</ul>
+<h3 id="G-子串缩写"><a href="#G-子串缩写" class="headerlink" title="G. 子串缩写"></a>G. 子串缩写</h3><p><strong>问题描述</strong>：<br>给定一个字符串，要求将其缩写，缩写规则为：保留首尾字符，中间用数字表示省略的字符数。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>分析字符串的长度</li>
+<li>根据长度决定是否需要缩写</li>
+<li>构造缩写字符串</li>
+<li>处理特殊情况</li>
+</ul>
+<h3 id="H-整数删除"><a href="#H-整数删除" class="headerlink" title="H. 整数删除"></a>H. 整数删除</h3><p><strong>问题描述</strong>：<br>给定一个整数序列，每次删除一个整数，删除后相邻的整数会相加，求删除所有整数后的最小和。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用贪心算法或优先队列</li>
+<li>每次选择删除对总和影响最小的整数</li>
+<li>维护相邻整数的关系</li>
+<li>优化删除顺序</li>
+</ul>
+<h3 id="I-景区导游"><a href="#I-景区导游" class="headerlink" title="I. 景区导游"></a>I. 景区导游</h3><p><strong>问题描述</strong>：<br>有N个景点，M条道路，每个景点有一个游览时间。导游需要按照给定的顺序游览景点，求最短的总游览时间。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用图论算法，如最短路径算法</li>
+<li>计算景点之间的最短路径</li>
+<li>按照游览顺序累加时间</li>
+<li>考虑游览时间和路径时间的平衡</li>
+</ul>
+<h3 id="J-砍树"><a href="#J-砍树" class="headerlink" title="J. 砍树"></a>J. 砍树</h3><p><strong>问题描述</strong>：<br>给定一个森林，每棵树有一个高度和价值。每次砍树可以选择砍掉任意一棵树，砍掉后相邻的树会受到影响。求能获得的最大价值。</p>
+<p><strong>解题思路</strong>：</p>
+<ul>
+<li>使用动态规划或贪心算法</li>
+<li>分析砍树的顺序和影响</li>
+<li>考虑相邻树之间的关系</li>
+<li>优化砍树策略</li>
+</ul>
+<h2 id="参赛经验总结"><a href="#参赛经验总结" class="headerlink" title="参赛经验总结"></a>参赛经验总结</h2><ol>
+<li><strong>时间管理</strong>：合理分配各题目的时间，先做简单的题目</li>
+<li><strong>代码规范</strong>：注意代码的可读性和调试便利性</li>
+<li><strong>边界条件</strong>：仔细考虑各种边界情况和特殊情况</li>
+<li><strong>算法选择</strong>：根据题目特点选择合适的算法和数据结构</li>
+<li><strong>数据类型</strong>：注意整数范围，选择合适的数据类型</li>
+</ol>
+<h2 id="学习建议"><a href="#学习建议" class="headerlink" title="学习建议"></a>学习建议</h2><ol>
+<li><strong>基础算法</strong>：熟练掌握常用算法和数据结构</li>
+<li><strong>数学基础</strong>：加强数学基础，特别是组合数学和数论</li>
+<li><strong>编程练习</strong>：多做练习题，提高编程能力和解题速度</li>
+<li><strong>真题练习</strong>：多做历年真题，熟悉考试题型和难度</li>
+<li><strong>模拟训练</strong>：在限定时间内完成模拟考试，提高应试能力</li>
+</ol>
+<h2 id="参考资源"><a href="#参考资源" class="headerlink" title="参考资源"></a>参考资源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/">蓝桥杯官方网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.dotcpp.com/oj/">C语言网蓝桥杯题库</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/">CSDN蓝桥杯题解</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.lanqiao.cn/courses/2786">蓝桥杯历年真题汇总</a></li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>仔细阅读题目要求，理解题意</li>
+<li>注意输入输出格式</li>
+<li>考虑时间复杂度和空间复杂度</li>
+<li>测试用例要覆盖各种情况</li>
+<li>提前准备好常用代码模板</li>
+<li>注意数据范围和精度问题</li>
+<li>合理使用STL库函数</li>
+<li>注意代码的鲁棒性</li>
+</ol>
+<h2 id="算法知识点总结"><a href="#算法知识点总结" class="headerlink" title="算法知识点总结"></a>算法知识点总结</h2><ol>
+<li><strong>搜索算法</strong>：DFS、BFS、二分搜索</li>
+<li><strong>动态规划</strong>：线性DP、区间DP、状态压缩DP</li>
+<li><strong>贪心算法</strong>：区间贪心、排序贪心</li>
+<li><strong>图论算法</strong>：最短路径、最小生成树、拓扑排序</li>
+<li><strong>数学算法</strong>：数论、组合数学、概率论</li>
+<li><strong>字符串算法</strong>：KMP、后缀数组、AC自动机</li>
+<li><strong>数据结构</strong>：线段树、树状数组、并查集、堆</li>
+</ol>
+<hr>
+<p><em>本文档整理了2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组的真题内容，供学习和参考使用。</em></p>
+
+    </div>
+    <footer class="article-footer">
+        <div class="share-wrapper">
+    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fzafrn.github.io%2F2026%2F04%2F17%2F%25E8%2593%259D%25E6%25A1%25A5%25E6%259D%25AF%2F%25E8%2593%259D%25E6%25A1%25A5%25E7%259C%259F%25E9%25A2%2598%2F2023%25E7%259C%259F%25E9%25A2%2598%2F&amp;title=2023%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AFC%2B%2BB%E7%BB%84%E7%9C%9F%E9%A2%98&amp;desc=2023%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AFC%2B%2BB%E7%BB%84%E7%9C%9F%E9%A2%98&amp;source=https%3A%2F%2Fzafrn.github.io" target="_blank" rel="noopener noreferrer" title="2023年蓝桥杯C++B组真题">
+      <div class="share-icon icon icon-qq">
+      </div>
+    </a>
+    <a href="javascript:;"  title="2023年蓝桥杯C++B组真题">
+      <div class="share-icon icon icon-weixin">
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hexo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+      </div>
+    </a>
+</div>
+        <a class="article-category-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" title="蓝桥杯" data-aos="zoom-in">蓝桥杯</a><a class="article-category-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/" title="蓝桥杯真题" data-aos="zoom-in">蓝桥杯真题</a><a class="article-category-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2023/" title="2023" data-aos="zoom-in">2023</a>
+
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/2023/" rel="tag" title="2023">2023</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/C/" rel="tag" title="C++">C++</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E7%9C%9F%E9%A2%98/" rel="tag" title="真题">真题</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" rel="tag" title="蓝桥杯">蓝桥杯</a></li></ul>
+
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+      <div class="article-nav-link-wrap left">
+            <img data-src="/images/banner.webp" data-sizes="auto" alt="" class="lazyload">
+        <a href="/en/2026/04/17/%E5%8D%95%E7%89%87%E6%9C%BA/51%E5%8D%95%E7%89%87%E6%9C%BA/" aria-label="Prev: no title" title="Prev: no title"></a>
+        <div class="article-nav-caption">Prev</div>
+        <h3 class="article-nav-title">
+            (no title)
+        </h3>
+      </div>
+    <div class="article-nav-link-wrap right">
+        <img data-src="/images/banner2.webp" data-sizes="auto" alt="2025年蓝桥杯c++B组真题" class="lazyload">
+      <a href="/en/2026/04/17/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E7%9C%9F%E9%A2%98/2025%E7%9C%9F%E9%A2%98/" aria-label="Next: 2025年蓝桥杯c++B组真题"  title="Next: 2025年蓝桥杯c++B组真题"></a>
+      <div class="article-nav-caption">Next</div>
+      <h3 class="article-nav-title">
+          2025年蓝桥杯c++B组真题
+      </h3>
+    </div>
+  </nav>
+
+</article>
+
+
+</section>
+        </div>
+        <footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+        2020-2026
+        <span class="footer-info-sep rotate"></span>
+      ZAFRN
+    </div>
+      <div>
+        <span class="icon-brush"></span>
+        4k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:18
+      </div>
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+  </div>
+</footer>
+
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2023%E5%B9%B4%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%A4%A7%E8%B5%9B%E8%BD%AF%E4%BB%B6%E8%B5%9B%E7%9C%81%E8%B5%9BC-C-%E5%A4%A7%E5%AD%A6B%E7%BB%84%E7%9C%9F%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">2023年第十四届蓝桥杯大赛软件赛省赛C&#x2F;C++大学B组真题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98%E5%88%97%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text">试题列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-%E6%97%A5%E6%9C%9F%E7%BB%9F%E8%AE%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">A. 日期统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-01%E4%B8%B2%E7%9A%84%E7%86%B5"><span class="toc-number">1.1.2.</span> <span class="toc-text">B. 01串的熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E5%86%B6%E7%82%BC%E9%87%91%E5%B1%9E"><span class="toc-number">1.1.3.</span> <span class="toc-text">C. 冶炼金属</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D-%E9%A3%9E%E6%9C%BA%E9%99%8D%E8%90%BD"><span class="toc-number">1.1.4.</span> <span class="toc-text">D. 飞机降落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E-%E6%8E%A5%E9%BE%99%E6%95%B0%E5%88%97"><span class="toc-number">1.1.5.</span> <span class="toc-text">E. 接龙数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#F-%E5%B2%9B%E5%B1%BF%E4%B8%AA%E6%95%B0"><span class="toc-number">1.1.6.</span> <span class="toc-text">F. 岛屿个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G-%E5%AD%90%E4%B8%B2%E7%BC%A9%E5%86%99"><span class="toc-number">1.1.7.</span> <span class="toc-text">G. 子串缩写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#H-%E6%95%B4%E6%95%B0%E5%88%A0%E9%99%A4"><span class="toc-number">1.1.8.</span> <span class="toc-text">H. 整数删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I-%E6%99%AF%E5%8C%BA%E5%AF%BC%E6%B8%B8"><span class="toc-number">1.1.9.</span> <span class="toc-text">I. 景区导游</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#J-%E7%A0%8D%E6%A0%91"><span class="toc-number">1.1.10.</span> <span class="toc-text">J. 砍树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%B5%9B%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text">参赛经验总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.3.</span> <span class="toc-text">学习建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%BA%90"><span class="toc-number">1.4.</span> <span class="toc-text">参考资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.5.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text">算法知识点总结</span></a></li></ol></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="ZAFRN" class="lazyload">
+  <div class="sidebar-author-name">ZAFRN</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">6</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">7</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+    <div class="icon-0 sidebar-social-icon">
+      <a href=w itemprop="url" target="_blank" aria-label="0" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-1 sidebar-social-icon">
+      <a href=e itemprop="url" target="_blank" aria-label="1" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-2 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="2" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-3 sidebar-social-icon">
+      <a href=x itemprop="url" target="_blank" aria-label="3" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-4 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="4" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-5 sidebar-social-icon">
+      <a href=n itemprop="url" target="_blank" aria-label="5" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-6 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="6" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-7 sidebar-social-icon">
+      <a href=1 itemprop="url" target="_blank" aria-label="7" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-8 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="8" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-9 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="9" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-10 sidebar-social-icon">
+      <a href=0 itemprop="url" target="_blank" aria-label="10" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-11 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="11" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-12 sidebar-social-icon">
+      <a href=6 itemprop="url" target="_blank" aria-label="12" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-13 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="13" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-14 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="14" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-15 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="15" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-16 sidebar-social-icon">
+      <a href=9 itemprop="url" target="_blank" aria-label="16" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-17 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="17" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-18 sidebar-social-icon">
+      <a href=  itemprop="url" target="_blank" aria-label="18" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-19 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="19" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-20 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="20" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-21 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="21" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-22 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="22" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-23 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="23" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-24 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="24" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-25 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="25" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-26 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="26" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-27 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="27" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-28 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="28" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-29 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="29" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-30 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="30" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-31 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="31" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+</div>
+</div>
+  </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+</nav>
+
+    </div>
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png" loading="lazy" decoding="async" fetchpriority="low"/>
+        </div>
+      </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+
+
+  <script>
+    var setupLive2d = () => {
+      live2d.init("https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/", {themeTipsPath: ""});
+    }
+  </script>
+  
+<script src="https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/js/live2d-autoload.js" onload="setupLive2d()" async></script>
+
+
+
+
+<div id="lazy-script">
+  <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "ZAFRN",
+          title: "2023年蓝桥杯C++B组真题",
+          url: "https://zafrn.github.io/2026/04/17/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E7%9C%9F%E9%A2%98/2023%E7%9C%9F%E9%A2%98/",
+          excerpt: "",
+          description: "",
+          stripContent: "2023年第十四届蓝桥杯大赛软件赛省赛C&amp;#x2F;C++大学B组真题试题列表A. 日期统计问题描述：小蓝现在有一个长度为100的数组，数组中的每个元素的值都在0到9的范围之内。数组中的元素从左至右如下所示：5 6 8 6 9 1 6 1 2 4 9 1 9 8 2 3 6 4 7 7 5 9 5 0 3 8 7 5 8 1 5 8 6 1 8 3 0 3 7 9 26 7 8 9 9 7 6 9 4 5 0 5 4 3 2 1 0 2 7 9 9 7 1 5 4 0 9 6 9 0 1 2 3",
+          date: "Fri Apr 17 2026 15:00:00 GMT+0800",
+          updated: "Fri Apr 17 2026 23:13:51 GMT+0800",
+          cover: "/images/banner4.webp",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+<script src="/js/tabs.js" data-pjax defer></script>
+
+        
+<script src="https://npm.webcache.cn/@zumer/snapdom@1.9.14/dist/snapdom.min.js" integrity="sha384-OEQ+fJp&#x2F;Mvi2uzBREXybtxryJvLytWapuHu4EE6LPwTKUwATYcc55tPPcZTzVcmx" crossorigin="anonymous" defer data-pjax></script>
+
+        
+<script src="https://npm.webcache.cn/qrcode@1.5.1/build/qrcode.js" integrity="sha384-VT1EeewTCEXgndcPMQ0PzV+uVFYjxFIjmAA7s5gcMX9t4Dt5TD+OVQIn7NJWIXn7" crossorigin="anonymous" defer data-pjax></script>
+
+      <script type="module" data-pjax>
+        (async () => {
+          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+          const initPswp = (gallery, children) => {
+            if (_$$(`${gallery} ${children}`).length > 0) {
+              new PhotoSwipeLightbox({
+                gallery,
+                children,
+                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+              }).init();
+            }
+          }
+          const pswp = () => {
+            initPswp('.article-entry', 'a.article-gallery-item');
+            initPswp('.article-gallery', 'a.article-gallery-item');
+          }
+          pswp();
+        })();
+      </script>
+        
+
+
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.12.3' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+  </body>
+  </html>
