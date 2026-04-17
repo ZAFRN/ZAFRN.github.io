@@ -1,0 +1,843 @@
+  <!DOCTYPE html>
+  <html lang="en"  
+      data-theme-mode="auto"
+  >
+  <head>
+  <meta charset="utf-8">
+  
+  
+  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_a0oqhord1y';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":10};window.REIMU_CONFIG.base = 'https://zafrn.github.io';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
+  <title>
+    蓝桥杯往届真题 | AWMA
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_a0oqhord1y.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+    <meta name="description" content="2025年蓝桥杯B组C++竞赛真题试题A: 青春常数题目描述小蓝与蓝桥杯的缘分已经走到了第四个年头。从2023年的初出茅庐，到2024、2025年的披荆斩棘，而今年的2026年，将是小蓝参加蓝桥杯的第四年。 青春常数定义为：一个正整数，如果它的各位数字之和等于它的各位数字之积，则称为青春常数。 输入格式输入一个正整数n（1 ≤ n ≤ 10^9）。 输出格式输出一个整数，表示小于等于n的青春常数的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蓝桥杯往届真题">
+<meta property="og:url" content="https://zafrn.github.io/en/2026/04/17/%E8%93%9D%E6%A1%A5%E7%9C%9F%E9%A2%98/2025%E7%9C%9F%E9%A2%98/index.html">
+<meta property="og:site_name" content="AWMA">
+<meta property="og:description" content="2025年蓝桥杯B组C++竞赛真题试题A: 青春常数题目描述小蓝与蓝桥杯的缘分已经走到了第四个年头。从2023年的初出茅庐，到2024、2025年的披荆斩棘，而今年的2026年，将是小蓝参加蓝桥杯的第四年。 青春常数定义为：一个正整数，如果它的各位数字之和等于它的各位数字之积，则称为青春常数。 输入格式输入一个正整数n（1 ≤ n ≤ 10^9）。 输出格式输出一个整数，表示小于等于n的青春常数的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-17T06:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-17T11:36:43.966Z">
+<meta property="article:author" content="ZAFRN">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="蓝桥杯">
+<meta name="twitter:card" content="summary">
+    <link rel="alternate" href="/atom.xml" title="AWMA" type="application/atom+xml">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx/1oA/0l8ysE" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+      <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+      </div>
+      <div class="loading-word">Loading...</div>
+    </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script>
+<div id="copy-tooltip"></div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
+        <a class="main-nav-link-wrap" href="/en/">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Home</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/en/archives">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Archives</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/en/about">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">About</span>
+        </a>
+        <a class="main-nav-link-wrap" href="/en/friend">
+            <div class="main-nav-icon icon rotate">
+                &#xe62b;
+            </div>
+          <span class="main-nav-link">Friend</span>
+        </a>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation">
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="Search" aria-label="Search"></a>
+  </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">English</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" aria-selected="false">简体中文</li>
+            <li data-value="en" role="option" class="selected" aria-selected="true">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/2026/04/17/蓝桥真题/2025真题/';
+              langMap['en'] = '/en/2026/04/17/蓝桥真题/2025真题/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
+</div>
+<header id="header" aria-label="Site header">
+    <picture></picture>
+    <img  fetchpriority="high" src="/images/banner.webp" alt="蓝桥杯往届真题">
+  <div id="header-outer">
+    <div id="header-title">
+          <span id="logo">
+            <h1 data-aos="slide-up">蓝桥杯往届真题</h1>
+          </span>
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+        </h2>
+    </div>
+  </div>
+</header>
+
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
+          <aside id="sidebar" aria-label="Sidebar">
+  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-wrap" data-aos="fade-up">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2025%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AFB%E7%BB%84C-%E7%AB%9E%E8%B5%9B%E7%9C%9F%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">2025年蓝桥杯B组C++竞赛真题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98A-%E9%9D%92%E6%98%A5%E5%B8%B8%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">试题A: 青春常数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.1.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98B-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB"><span class="toc-number">1.2.</span> <span class="toc-text">试题B: 移动距离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">1.2.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">1.2.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-1"><span class="toc-number">1.2.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-1"><span class="toc-number">1.2.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98C-%E5%AE%A2%E6%B5%81%E9%87%8F%E4%B8%8A%E9%99%90"><span class="toc-number">1.3.</span> <span class="toc-text">试题C: 客流量上限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">1.3.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">1.3.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">1.3.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-2"><span class="toc-number">1.3.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-2"><span class="toc-number">1.3.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98D-%E5%8F%AF%E5%88%86%E8%A7%A3%E7%9A%84%E6%AD%A3%E6%95%B4%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">试题D: 可分解的正整数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">1.4.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-3"><span class="toc-number">1.4.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-3"><span class="toc-number">1.4.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">1.4.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-3"><span class="toc-number">1.4.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-3"><span class="toc-number">1.4.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98E-%E4%BA%A7%E5%80%BC%E8%B0%83%E6%95%B4"><span class="toc-number">1.5.</span> <span class="toc-text">试题E: 产值调整</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">1.5.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-4"><span class="toc-number">1.5.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-4"><span class="toc-number">1.5.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">1.5.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-4"><span class="toc-number">1.5.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-4"><span class="toc-number">1.5.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li></ol></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="ZAFRN" class="lazyload">
+  <div class="sidebar-author-name">ZAFRN</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">6</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+    <div class="icon-0 sidebar-social-icon">
+      <a href=w itemprop="url" target="_blank" aria-label="0" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-1 sidebar-social-icon">
+      <a href=e itemprop="url" target="_blank" aria-label="1" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-2 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="2" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-3 sidebar-social-icon">
+      <a href=x itemprop="url" target="_blank" aria-label="3" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-4 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="4" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-5 sidebar-social-icon">
+      <a href=n itemprop="url" target="_blank" aria-label="5" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-6 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="6" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-7 sidebar-social-icon">
+      <a href=1 itemprop="url" target="_blank" aria-label="7" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-8 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="8" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-9 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="9" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-10 sidebar-social-icon">
+      <a href=0 itemprop="url" target="_blank" aria-label="10" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-11 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="11" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-12 sidebar-social-icon">
+      <a href=6 itemprop="url" target="_blank" aria-label="12" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-13 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="13" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-14 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="14" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-15 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="15" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-16 sidebar-social-icon">
+      <a href=9 itemprop="url" target="_blank" aria-label="16" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-17 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="17" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-18 sidebar-social-icon">
+      <a href=  itemprop="url" target="_blank" aria-label="18" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-19 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="19" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-20 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="20" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-21 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="21" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-22 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="22" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-23 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="23" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-24 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="24" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-25 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="25" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-26 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="26" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-27 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="27" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-28 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="28" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-29 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="29" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-30 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="30" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-31 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="31" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+</div>
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+  </div>
+  </div>
+</aside>
+
+          <section id="main" aria-label="Main content"><article id="post-蓝桥真题/2025真题" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2026-04-17T06:00:00.000Z" itemprop="datePublished">2026-04-17</time>
+    <time style="display: none;" id="post-update-time">2026-04-17</time>
+  </span>
+</div>
+
+    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <h1 id="2025年蓝桥杯B组C-竞赛真题"><a href="#2025年蓝桥杯B组C-竞赛真题" class="headerlink" title="2025年蓝桥杯B组C++竞赛真题"></a>2025年蓝桥杯B组C++竞赛真题</h1><h2 id="试题A-青春常数"><a href="#试题A-青春常数" class="headerlink" title="试题A: 青春常数"></a>试题A: 青春常数</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>小蓝与蓝桥杯的缘分已经走到了第四个年头。从2023年的初出茅庐，到2024、2025年的披荆斩棘，而今年的2026年，将是小蓝参加蓝桥杯的第四年。</p>
+<p>青春常数定义为：一个正整数，如果它的各位数字之和等于它的各位数字之积，则称为青春常数。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一个正整数n（1 ≤ n ≤ 10^9）。</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数，表示小于等于n的青春常数的个数。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><strong>输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">23</span><br></pre></td></tr></table></figure>
+<p><strong>输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>暴力枚举法</strong>：遍历1到n的所有整数，检查每个整数是否满足青春常数的条件</li>
+<li><strong>优化思路</strong>：由于青春常数的条件比较特殊，可以考虑数学优化</li>
+</ol>
+<h3 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断是否为青春常数的函数</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isYouthConstant</span><span class="params">(<span class="type">int</span> num)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> sum = <span class="number">0</span>;      <span class="comment">// 数字之和</span></span><br><span class="line">    <span class="type">int</span> product = <span class="number">1</span>;   <span class="comment">// 数字之积</span></span><br><span class="line">    <span class="type">int</span> temp = num;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (temp &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="type">int</span> digit = temp % <span class="number">10</span>;  <span class="comment">// 获取最后一位数字</span></span><br><span class="line">        sum += digit;           <span class="comment">// 累加数字</span></span><br><span class="line">        product *= digit;       <span class="comment">// 累乘数字</span></span><br><span class="line">        temp /= <span class="number">10</span>;            <span class="comment">// 去掉最后一位</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sum == product;  <span class="comment">// 判断和是否等于积</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isYouthConstant</span>(i)) &#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; count &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="试题B-移动距离"><a href="#试题B-移动距离" class="headerlink" title="试题B: 移动距离"></a>试题B: 移动距离</h2><h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>在一个二维平面上，有一个机器人从起点(0,0)出发，需要到达终点(n,m)。机器人每次只能向右或向上移动一步，求从起点到终点的最短路径长度。</p>
+<h3 id="输入格式-1"><a href="#输入格式-1" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入两个正整数n和m（1 ≤ n, m ≤ 10^6）。</p>
+<h3 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出最短路径的长度。</p>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><p><strong>输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3 4</span><br></pre></td></tr></table></figure>
+<p><strong>输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">7</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>数学规律</strong>：从(0,0)到(n,m)的最短路径长度就是n+m</li>
+<li><strong>动态规划</strong>：也可以使用DP求解，但数学方法更高效</li>
+</ol>
+<h3 id="参考代码-1"><a href="#参考代码-1" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 最短路径长度就是向右移动n步，向上移动m步</span></span><br><span class="line">    cout &lt;&lt; n + m &lt;&lt; endl;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="试题C-客流量上限"><a href="#试题C-客流量上限" class="headerlink" title="试题C: 客流量上限"></a>试题C: 客流量上限</h2><h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>某景区有n个景点，每个景点都有一个最大客容量。现在有m个游客要参观这些景点，每个游客只能参观一个景点。求如何分配游客，使得所有景点的客流量都不超过其最大容量。</p>
+<h3 id="输入格式-2"><a href="#输入格式-2" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行输入两个整数n和m（1 ≤ n, m ≤ 10^5）。<br>第二行输入n个整数，表示每个景点的最大客容量。</p>
+<h3 id="输出格式-2"><a href="#输出格式-2" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出一个整数，表示最多可以接待的游客数量。</p>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><p><strong>输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3 10</span><br><span class="line">4 5 6</span><br></pre></td></tr></table></figure>
+<p><strong>输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>贪心算法</strong>：优先分配给容量大的景点</li>
+<li><strong>排序</strong>：将景点容量排序，然后依次分配游客</li>
+</ol>
+<h3 id="参考代码-2"><a href="#参考代码-2" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    </span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">capacity</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; capacity[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 按容量从大到小排序</span></span><br><span class="line">    <span class="built_in">sort</span>(capacity.<span class="built_in">begin</span>(), capacity.<span class="built_in">end</span>(), <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> visitors = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n &amp;&amp; visitors &lt; m; i++) &#123;</span><br><span class="line">        <span class="type">int</span> canAccept = <span class="built_in">min</span>(capacity[i], m - visitors);</span><br><span class="line">        total += canAccept;</span><br><span class="line">        visitors += canAccept;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; total &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="试题D-可分解的正整数"><a href="#试题D-可分解的正整数" class="headerlink" title="试题D: 可分解的正整数"></a>试题D: 可分解的正整数</h2><h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>一个正整数如果可以表示为两个或更多连续正整数的和，则称为可分解的正整数。例如：15 &#x3D; 7+8 &#x3D; 4+5+6 &#x3D; 1+2+3+4+5，所以15是可分解的正整数。</p>
+<h3 id="输入格式-3"><a href="#输入格式-3" class="headerlink" title="输入格式"></a>输入格式</h3><p>输入一个正整数n（1 ≤ n ≤ 10^9）。</p>
+<h3 id="输出格式-3"><a href="#输出格式-3" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出n是否为可分解的正整数，如果是输出”YES”，否则输出”NO”。</p>
+<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><p><strong>输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">15</span><br></pre></td></tr></table></figure>
+<p><strong>输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>数学性质</strong>：一个数如果是2的幂次方，则不可分解；否则可分解</li>
+<li><strong>位运算</strong>：检查n是否为2的幂次方</li>
+</ol>
+<h3 id="参考代码-3"><a href="#参考代码-3" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 检查是否为2的幂次方</span></span><br><span class="line">    <span class="keyword">if</span> ((n &amp; (n - <span class="number">1</span>)) == <span class="number">0</span> &amp;&amp; n != <span class="number">1</span>) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;NO&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;YES&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="试题E-产值调整"><a href="#试题E-产值调整" class="headerlink" title="试题E: 产值调整"></a>试题E: 产值调整</h2><h3 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h3><p>某公司有n个部门，每个部门都有一个产值。现在需要调整各部门的产值，使得所有部门的产值相等，且调整的总代价最小。调整一个部门的产值x到y的代价为|x-y|。</p>
+<h3 id="输入格式-4"><a href="#输入格式-4" class="headerlink" title="输入格式"></a>输入格式</h3><p>第一行输入整数n（1 ≤ n ≤ 10^5）。<br>第二行输入n个整数，表示各部门的初始产值。</p>
+<h3 id="输出格式-4"><a href="#输出格式-4" class="headerlink" title="输出格式"></a>输出格式</h3><p>输出最小的调整总代价。</p>
+<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><p><strong>输入：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1 2 3</span><br></pre></td></tr></table></figure>
+<p><strong>输出：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li><strong>中位数性质</strong>：调整到中位数时总代价最小</li>
+<li><strong>排序</strong>：找到中位数，计算总代价</li>
+</ol>
+<h3 id="参考代码-4"><a href="#参考代码-4" class="headerlink" title="参考代码"></a>参考代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    </span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">values</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; values[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 排序</span></span><br><span class="line">    <span class="built_in">sort</span>(values.<span class="built_in">begin</span>(), values.<span class="built_in">end</span>());</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 找到中位数</span></span><br><span class="line">    <span class="type">int</span> median = values[n / <span class="number">2</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 计算总代价</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> totalCost = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        totalCost += <span class="built_in">abs</span>(values[i] - median);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; totalCost &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+    </div>
+    <footer class="article-footer">
+        <div class="share-wrapper">
+    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fzafrn.github.io%2F2026%2F04%2F17%2F%25E8%2593%259D%25E6%25A1%25A5%25E7%259C%259F%25E9%25A2%2598%2F2025%25E7%259C%259F%25E9%25A2%2598%2F&amp;title=%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%BE%80%E5%B1%8A%E7%9C%9F%E9%A2%98&amp;desc=%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%BE%80%E5%B1%8A%E7%9C%9F%E9%A2%98&amp;source=https%3A%2F%2Fzafrn.github.io" target="_blank" rel="noopener noreferrer" title="蓝桥杯往届真题">
+      <div class="share-icon icon icon-qq">
+      </div>
+    </a>
+    <a href="javascript:;"  title="蓝桥杯往届真题">
+      <div class="share-icon icon icon-weixin">
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hexo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+      </div>
+    </a>
+</div>
+        <a class="article-category-link" href="/en/categories/%E8%93%9D%E6%A1%A5/" title="蓝桥" data-aos="zoom-in">蓝桥</a><a class="article-category-link" href="/en/categories/%E8%93%9D%E6%A1%A5/%E7%AB%9E%E8%B5%9B/" title="竞赛" data-aos="zoom-in">竞赛</a>
+
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E7%AE%97%E6%B3%95/" rel="tag" title="算法">算法</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E7%BC%96%E7%A8%8B/" rel="tag" title="编程">编程</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/" rel="tag" title="蓝桥杯">蓝桥杯</a></li></ul>
+
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+    <div class="article-nav-link-wrap right">
+        <img data-src="/images/banner.webp" data-sizes="auto" alt="蓝桥杯竞赛指南" class="lazyload">
+      <a href="/en/2026/04/17/%E8%93%9D%E6%A1%A5/%E8%93%9D%E6%A1%A5%E6%9D%AF%E6%8C%87%E5%8D%97/" aria-label="Next: 蓝桥杯竞赛指南"  title="Next: 蓝桥杯竞赛指南"></a>
+      <div class="article-nav-caption">Next</div>
+      <h3 class="article-nav-title">
+          蓝桥杯竞赛指南
+      </h3>
+    </div>
+  </nav>
+
+</article>
+
+
+</section>
+        </div>
+        <footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+        2020-2026
+        <span class="footer-info-sep rotate"></span>
+      ZAFRN
+    </div>
+      <div>
+        <span class="icon-brush"></span>
+        2.9k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:13
+      </div>
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+  </div>
+</footer>
+
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2025%E5%B9%B4%E8%93%9D%E6%A1%A5%E6%9D%AFB%E7%BB%84C-%E7%AB%9E%E8%B5%9B%E7%9C%9F%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">2025年蓝桥杯B组C++竞赛真题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98A-%E9%9D%92%E6%98%A5%E5%B8%B8%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">试题A: 青春常数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.1.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81"><span class="toc-number">1.1.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98B-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB"><span class="toc-number">1.2.</span> <span class="toc-text">试题B: 移动距离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-1"><span class="toc-number">1.2.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">1.2.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-1"><span class="toc-number">1.2.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-1"><span class="toc-number">1.2.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98C-%E5%AE%A2%E6%B5%81%E9%87%8F%E4%B8%8A%E9%99%90"><span class="toc-number">1.3.</span> <span class="toc-text">试题C: 客流量上限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">1.3.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-2"><span class="toc-number">1.3.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">1.3.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-2"><span class="toc-number">1.3.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-2"><span class="toc-number">1.3.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98D-%E5%8F%AF%E5%88%86%E8%A7%A3%E7%9A%84%E6%AD%A3%E6%95%B4%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">试题D: 可分解的正整数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-3"><span class="toc-number">1.4.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-3"><span class="toc-number">1.4.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-3"><span class="toc-number">1.4.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">1.4.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-3"><span class="toc-number">1.4.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-3"><span class="toc-number">1.4.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E9%A2%98E-%E4%BA%A7%E5%80%BC%E8%B0%83%E6%95%B4"><span class="toc-number">1.5.</span> <span class="toc-text">试题E: 产值调整</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0-4"><span class="toc-number">1.5.1.</span> <span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A0%BC%E5%BC%8F-4"><span class="toc-number">1.5.2.</span> <span class="toc-text">输入格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F-4"><span class="toc-number">1.5.3.</span> <span class="toc-text">输出格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">1.5.4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF-4"><span class="toc-number">1.5.5.</span> <span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E4%BB%A3%E7%A0%81-4"><span class="toc-number">1.5.6.</span> <span class="toc-text">参考代码</span></a></li></ol></li></ol></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="ZAFRN" class="lazyload">
+  <div class="sidebar-author-name">ZAFRN</div>
+  <div class="sidebar-description"></div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>Post</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>Category</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>Tag</div>
+    <div class="sidebar-state-number">6</div>
+  </div>
+</div>
+<div class="sidebar-social" >
+    <div class="icon-0 sidebar-social-icon">
+      <a href=w itemprop="url" target="_blank" aria-label="0" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-1 sidebar-social-icon">
+      <a href=e itemprop="url" target="_blank" aria-label="1" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-2 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="2" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-3 sidebar-social-icon">
+      <a href=x itemprop="url" target="_blank" aria-label="3" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-4 sidebar-social-icon">
+      <a href=i itemprop="url" target="_blank" aria-label="4" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-5 sidebar-social-icon">
+      <a href=n itemprop="url" target="_blank" aria-label="5" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-6 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="6" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-7 sidebar-social-icon">
+      <a href=1 itemprop="url" target="_blank" aria-label="7" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-8 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="8" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-9 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="9" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-10 sidebar-social-icon">
+      <a href=0 itemprop="url" target="_blank" aria-label="10" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-11 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="11" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-12 sidebar-social-icon">
+      <a href=6 itemprop="url" target="_blank" aria-label="12" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-13 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="13" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-14 sidebar-social-icon">
+      <a href=3 itemprop="url" target="_blank" aria-label="14" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-15 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="15" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-16 sidebar-social-icon">
+      <a href=9 itemprop="url" target="_blank" aria-label="16" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-17 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="17" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-18 sidebar-social-icon">
+      <a href=  itemprop="url" target="_blank" aria-label="18" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-19 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="19" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-20 sidebar-social-icon">
+      <a href=q itemprop="url" target="_blank" aria-label="20" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-21 sidebar-social-icon">
+      <a href=: itemprop="url" target="_blank" aria-label="21" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-22 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="22" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-23 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="23" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-24 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="24" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-25 sidebar-social-icon">
+      <a href=8 itemprop="url" target="_blank" aria-label="25" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-26 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="26" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-27 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="27" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-28 sidebar-social-icon">
+      <a href=7 itemprop="url" target="_blank" aria-label="28" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-29 sidebar-social-icon">
+      <a href=4 itemprop="url" target="_blank" aria-label="29" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-30 sidebar-social-icon">
+      <a href=2 itemprop="url" target="_blank" aria-label="30" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-31 sidebar-social-icon">
+      <a href=5 itemprop="url" target="_blank" aria-label="31" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Home</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Archives</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">About</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
+          <div class="sidebar-menu-icon icon rotate">
+              &#xe62b;
+          </div>
+        <div class="sidebar-menu-link">Friend</div>
+      </div>
+</div>
+</div>
+  </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+</nav>
+
+    </div>
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png" loading="lazy" decoding="async" fetchpriority="low"/>
+        </div>
+      </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+  
+<script src="/js/generator_search.js" defer></script>
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/live2d-widgets@0.9.0/autoload.js" integrity="sha384-poTN7wN&#x2F;SqNhQqo3jdFeX20ikddWeFGkUkDEzsKjgH&#x2F;ez8aQLn81oI0Cw6q5xNyB" crossorigin="anonymous"></script>
+
+
+
+<div id="lazy-script">
+  <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "ZAFRN",
+          title: "蓝桥杯往届真题",
+          url: "https://zafrn.github.io/2026/04/17/%E8%93%9D%E6%A1%A5%E7%9C%9F%E9%A2%98/2025%E7%9C%9F%E9%A2%98/",
+          excerpt: "",
+          description: "",
+          stripContent: "2025年蓝桥杯B组C++竞赛真题试题A: 青春常数题目描述小蓝与蓝桥杯的缘分已经走到了第四个年头。从2023年的初出茅庐，到2024、2025年的披荆斩棘，而今年的2026年，将是小蓝参加蓝桥杯的第四年。 青春常数定义为：一个正整数，如果它的各位数字之和等于它的各位数字之积，则称为青春常数。 输入格式输入一个正整数n（1 ≤ n ≤ 10^9）。 输出格式输出一个整数，表示小于等于n的青春常数的个数。 示例输入： 123 输出： 19  解题思路 暴力枚举法：遍历1到n的所有整数，检查每个整数",
+          date: "Fri Apr 17 2026 14:00:00 GMT+0800",
+          updated: "Fri Apr 17 2026 19:36:43 GMT+0800",
+          cover: "/images/banner.webp",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+<script src="/js/tabs.js" data-pjax defer></script>
+
+        
+<script src="https://npm.webcache.cn/@zumer/snapdom@1.9.14/dist/snapdom.min.js" integrity="sha384-OEQ+fJp&#x2F;Mvi2uzBREXybtxryJvLytWapuHu4EE6LPwTKUwATYcc55tPPcZTzVcmx" crossorigin="anonymous" defer data-pjax></script>
+
+        
+<script src="https://npm.webcache.cn/qrcode@1.5.1/build/qrcode.js" integrity="sha384-VT1EeewTCEXgndcPMQ0PzV+uVFYjxFIjmAA7s5gcMX9t4Dt5TD+OVQIn7NJWIXn7" crossorigin="anonymous" defer data-pjax></script>
+
+      <script type="module" data-pjax>
+        (async () => {
+          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+          const initPswp = (gallery, children) => {
+            if (_$$(`${gallery} ${children}`).length > 0) {
+              new PhotoSwipeLightbox({
+                gallery,
+                children,
+                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+              }).init();
+            }
+          }
+          const pswp = () => {
+            initPswp('.article-entry', 'a.article-gallery-item');
+            initPswp('.article-gallery', 'a.article-gallery-item');
+          }
+          pswp();
+        })();
+      </script>
+        
+
+
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.12.3' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+  </body>
+  </html>
