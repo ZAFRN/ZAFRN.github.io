@@ -195,15 +195,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Post</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-category">
     <div>Category</div>
-    <div class="sidebar-state-number">5</div>
+    <div class="sidebar-state-number">9</div>
   </div>
   <div class="sidebar-state-tag">
     <div>Tag</div>
-    <div class="sidebar-state-number">7</div>
+    <div class="sidebar-state-number">13</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -340,12 +340,58 @@
   <div class="sidebar-widget">
         <div class="widget-wrapper">
     <div class="widget-wrap" data-aos="fade-up">
-      <h3 class="widget-title">Categories</h3>
-      <div class="widget">
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" title="蓝桥杯">蓝桥杯</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/" title="蓝桥杯真题">蓝桥杯真题</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2023/" title="2023">2023</a></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2024/" title="2024">2024</a></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2025/" title="2025">2025</a></li></ul></li></ul></li></ul>
+      <h3 class="widget-title" id="category-toggle">Categories</h3>
+      <div class="widget" id="category-list">
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E5%8D%95%E7%89%87%E6%9C%BA/" title="单片机">单片机</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E5%8D%95%E7%89%87%E6%9C%BA/32%E5%8D%95%E7%89%87%E6%9C%BA/" title="32单片机">32单片机</a></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E5%8D%95%E7%89%87%E6%9C%BA/51%E5%8D%95%E7%89%87%E6%9C%BA/" title="51单片机">51单片机</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" title="蓝桥杯">蓝桥杯</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E7%AC%94%E8%AE%B0%E6%9D%82%E4%B9%B1/" title="笔记杂乱">笔记杂乱</a></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/" title="蓝桥杯真题">蓝桥杯真题</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2023/" title="2023">2023</a></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2024/" title="2024">2024</a></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/%E8%93%9D%E6%A1%A5%E6%9D%AF%E7%9C%9F%E9%A2%98/2025/" title="2025">2025</a></li></ul></li></ul></li></ul>
       </div>
     </div>
   </div>
+  <style>
+    #category-toggle {
+      cursor: pointer;
+      position: relative;
+      padding-right: 20px;
+    }
+    #category-toggle::after {
+      content: '▼';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+      transition: transform 0.3s ease;
+    }
+    #category-toggle.collapsed::after {
+      transform: translateY(-50%) rotate(-90deg);
+    }
+    #category-list {
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      overflow: hidden;
+      max-height: 500px;
+      opacity: 1;
+    }
+    #category-list.collapsed {
+      max-height: 0;
+      opacity: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('category-toggle');
+      const list = document.getElementById('category-list');
+      
+      if (toggle && list) {
+        toggle.addEventListener('click', function() {
+          toggle.classList.toggle('collapsed');
+          list.classList.toggle('collapsed');
+        });
+        
+        // 默认折叠
+        toggle.classList.add('collapsed');
+        list.classList.add('collapsed');
+      }
+    });
+  </script>
 
   </div>
   </div>
@@ -419,10 +465,10 @@
     </div>
       <div>
         <span class="icon-brush"></span>
-        4k
+        32.7k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:19
+        02:15
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -450,15 +496,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Post</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">7</div>
   </div>
   <div class="sidebar-state-category">
     <div>Category</div>
-    <div class="sidebar-state-number">5</div>
+    <div class="sidebar-state-number">9</div>
   </div>
   <div class="sidebar-state-tag">
     <div>Tag</div>
-    <div class="sidebar-state-number">7</div>
+    <div class="sidebar-state-number">13</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -650,14 +696,6 @@
 
 
 
-
-  <script>
-    var setupLive2d = () => {
-      live2d.init("https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/", {themeTipsPath: ""});
-    }
-  </script>
-  
-<script src="https://fastly.jsdelivr.net/gh/D-Sketon/plugin-live2d/js/live2d-autoload.js" onload="setupLive2d()" async></script>
 
 
 
